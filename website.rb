@@ -2,5 +2,9 @@ require 'rubygems'
 require 'sinatra'
 
 get '/' do
-	'hello'
+	erb :index
+end
+
+post '/customer/new' do 
+
 end

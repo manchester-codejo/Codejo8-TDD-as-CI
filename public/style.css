@@ -1,0 +1,28 @@
+body {
+	font-family: ProximaNovaLight, Georgia, "Lucida Grande", Helvetica, Arial;
+}
+
+form div {
+	width: 100%;
+	padding: 0.4em;
+}
+
+form label {
+	width: 150px;
+	display: inline-block;
+}
+
+.itemButton {
+	width: 30px;
+	font-weight: bold;
+}
+
+form input {
+	width: 100px;
+	text-align: center;
+}
+
+form select {
+	width: 170px;
+	text-align: center;
+}

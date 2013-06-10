@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<form>
+			<div>
+				<label for="sku">Product:</label>
+				<select id="sku" name="sku">
+					<option value="A">Apples</option>
+					<option value="B">Biscuits</option>
+					<option value="C">Crack (bag)</option>
+					<option value="D">Dog Food</option>
+				</select>
+			</div>
+			<div>
+				<label for="quanity">Quanity:</label>
+				<input id="quanity" name="quanity" readonly=true type="input" value="1"/>
+				<button class="itemButton" id="add">+</button><button class="itemButton" id="remove">-</button>
+			</div>
+		</form>
+	</body>
+</html>
