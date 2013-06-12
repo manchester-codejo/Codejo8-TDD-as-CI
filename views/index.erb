@@ -6,26 +6,35 @@
 	</head>
 	<body>
 		<div id="content">
+			<div id="header">
+				<div>
+					<img height="70px" src="images/codejo.png"/>
+				</div>
+			</div>
 			<form action="/scan" method="post">
-				<div>
-					<label for="sku">Product:</label>
-					<select id="sku" name="sku">
-						<option value="A">Apples</option>
-						<option value="B">Biscuits</option>
-						<option value="C">Crack (bag)</option>
-						<option value="D">Dog Food</option>
-					</select>
-				</div>
-				<div>
-					<label for="quantity">Quanity:</label>
-					<input id="quantity" name="quantity" readonly=true type="input" value="0"/>
-					<button type="button" class="itemButton" id="add">+</button><button type="button" class="itemButton" id="remove" disabled="true">-</button>
-				</div>
-				<div id="submit">
-					<input type="submit" value="Scan"/>
+				<div id="scanner" class="rounded">
+					<div>
+						<label for="sku">Product:</label>
+						<select id="sku" name="sku">
+							<option value="A">Apples</option>
+							<option value="B">Biscuits</option>
+							<option value="C">Crack (bag)</option>
+							<option value="D">Dog Food</option>
+						</select>
+					</div>
+					<div>
+						<label for="quantity">Quanity:</label>
+						<input id="quantity" name="quantity" readonly=true type="input" value="0"/>
+						<button type="button" class="itemButton" id="add">+</button><button type="button" class="itemButton" id="remove" disabled="true">-</button>
+					</div>
+					<div id="submit">
+						<input type="submit" value="Scan"/>
+					</div>
 				</div>
 			</form>
-			<a href='/total'><button>Total</button></a>
+			<div id="total">
+				<a href='/total'><button>Total</button></a>
+			</div>
 		</div>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 		<script>

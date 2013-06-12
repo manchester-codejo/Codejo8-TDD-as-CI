@@ -1,19 +1,43 @@
 body {
 	font-family: ProximaNovaLight, Georgia, "Lucida Grande", Helvetica, Arial;
+	padding-top: 150px;
 }
 
 #content {
-	width :335px;
+	width: 400px;
+    margin: 0 auto;
 }
 
-form div {
-	width: 100%;
+#scanner {
+	padding: 5px;
+	border: solid 0.5px #848482;
+}
+
+.rounded {
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+}
+
+#scanner div {
+	padding: 0.4em;
+	text-align: right;
+}
+
+#scanner, #total {
+	float: left;
+}
+
+#total {
 	padding: 0.4em;
 }
 
+#total button {
+	padding: 4em 1em;
+}
+
 form label {
-	width: 150px;
-	display: inline-block;
+	margin-right: 10px;
 }
 
 .itemButton {
