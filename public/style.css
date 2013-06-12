@@ -2,6 +2,10 @@ body {
 	font-family: ProximaNovaLight, Georgia, "Lucida Grande", Helvetica, Arial;
 }
 
+#content {
+	width :335px;
+}
+
 form div {
 	width: 100%;
 	padding: 0.4em;
@@ -19,10 +23,18 @@ form label {
 
 form input {
 	width: 100px;
-	text-align: center;
 }
 
 form select {
-	width: 170px;
+	width: 180px;
+}
+
+form select, form input, form button {
+	padding: 5px;
 	text-align: center;
+}
+
+form #submit input  {
+	text-align: center;
+	width: 100%;
 }

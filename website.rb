@@ -5,6 +5,6 @@ get '/' do
 	erb :index
 end
 
-post '/customer/new' do 
-
+post '/scan' do 
+	redirect '/'
 end
