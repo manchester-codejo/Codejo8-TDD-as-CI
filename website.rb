@@ -5,6 +5,18 @@ get '/' do
 	erb :index
 end
 
-post '/scan' do 
-	redirect '/'
+post '/basket/new' do
+	redirect '/basket/items'
+end
+
+get '/basket/items' do
+	erb :items
+end
+
+post '/basket/items' do 
+	redirect '/basket/items'
+end
+
+get '/basket/total' do
+	erb :total
 end

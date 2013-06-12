@@ -8,9 +8,13 @@ body {
     margin: 0 auto;
 }
 
-#scanner {
+#scanner, .total {
 	padding: 5px;
 	border: solid 1px #848482;
+}
+
+.total {
+	padding: 20px 50px;
 }
 
 .rounded {
@@ -28,11 +32,11 @@ body {
 	float: left;
 }
 
-#total {
+#total{
 	padding: 0.4em;
 }
 
-#total button {
+#total button{
 	padding: 4em 1em;
 }
 
@@ -53,12 +57,12 @@ form select {
 	width: 180px;
 }
 
-form select, form input, form button {
+form select, form input, button {
 	padding: 5px;
 	text-align: center;
 }
 
-form #submit input  {
+form #submit input, #done button  {
 	text-align: center;
 	width: 100%;
 }
