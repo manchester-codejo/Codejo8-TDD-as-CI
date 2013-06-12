@@ -3,11 +3,11 @@ class TotalViewStore
 		@total_model = {total: 0}
 	end
 
-	def display_total(money)
+	def show_total(money)
 		@total_model[:total] = money.amount
 	end
 
-	def get_total
+	def get_model
 		@total_model
 	end
 end
