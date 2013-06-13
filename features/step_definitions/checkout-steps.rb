@@ -10,5 +10,5 @@ When(/^the total is calculated$/) do
 end
 
 Then(/^the total is "(.*?)"$/) do |expected_total|
-  	
+  	first("#total").text.should == expected_total
 end

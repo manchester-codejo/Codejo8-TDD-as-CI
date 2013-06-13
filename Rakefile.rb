@@ -1,4 +1,4 @@
-task :default => [:dependencies, :commit, :deploy]
+task :default => [:dependencies, :scenarios, :commit, :deploy]
 
 task :dependencies do
 	sh 'bundle install'
@@ -12,6 +12,19 @@ task :commit do
 	git.add
 	git.commit(:message => "@{commit_message}")
 	git.push	
+end
+
+task :scenarios do
+	sh 'foreman start&'
+	begin
+		sh 'bundle exec cucumber'
+	rescue
+		puts 'NOT FEATURE COMPLETE'
+		gets.chomp
+	ensure
+		process = `pidof ruby1.9.1`
+		sh "kill #{process}"
+	end
 end
 
 task :deploy do
