@@ -8,3 +8,6 @@ Feature: When I buy one item(s) without special offers, then I am charged the co
 	Examples:
 		| sku | total |
 		| A   | 50    |
+		| B   | 30	  |
+		| C   | 60    |
+		| D   | 99    |
