@@ -2,16 +2,18 @@ require 'rubygems'
 require 'sinatra'
 require_relative 'src/Registry.rb'
 
-$total_view_store = TotalViewStore.new
-$checkout = CheckoutFactory.create($total_view_store)
+
+def reset
+	$total_view_store = TotalViewStore.new
+	$checkout = CheckoutFactory.create($total_view_store)
+end
 
 get '/' do
 	erb :index
 end
 
 post '/basket/new' do
-	$total_view_store = TotalViewStore.new
-	$checkout = CheckoutFactory.create($total_view_store)
+	reset
 	redirect '/basket/items'
 end
 
@@ -32,3 +34,4 @@ end
 get '/basket/total' do
 	erb :total, :locals => $total_view_store.get_model
 end
+

@@ -6,9 +6,9 @@ Given(/^one item "(.*?)" scanned$/) do |sku|
 end
 
 When(/^the total is calculated$/) do
-  pending # express the regexp above with the code you wish you had
+  	click_button('Total')
 end
 
 Then(/^the total is "(.*?)"$/) do |expected_total|
-  pending # express the regexp above with the code you wish you had
+  	
 end
