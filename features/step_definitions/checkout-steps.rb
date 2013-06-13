@@ -1,4 +1,4 @@
-Given(/^one item "(.*?)" scanned$/) do |sku|
+Given(/^one item "(.*?)" added$/) do |sku|
 	visit '/'
 	click_button('Start')
 	select(sku, :from => 'sku')
