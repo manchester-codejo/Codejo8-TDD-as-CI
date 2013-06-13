@@ -9,45 +9,16 @@ body {
     margin: 0 auto;
 }
 
-#scanner, .total {
+.bordered-container {
 	padding: 5px;
 	border: solid 1px #848482;
-}
-
-.total {
-	padding: 20px 50px;
-}
-
-.rounded {
 	-moz-border-radius: 7px;
 	-webkit-border-radius: 7px;
 	border-radius: 7px;
 }
 
-#scanner div {
-	padding: 0.4em;
-	text-align: right;
-}
-
-#scanner, #total {
-	float: left;
-}
-
-#total{
-	padding: 0.4em;
-}
-
-#total button{
-	padding: 2.5em 1em;
-}
-
 form label {
 	margin-right: 10px;
-}
-
-.itemButton {
-	width: 30px;
-	font-weight: bold;
 }
 
 form input {

@@ -1,0 +1,17 @@
+#scanner div {
+	padding: 0.4em;
+	text-align: right;
+}
+
+#scanner, #total {
+	float: left;
+}
+
+#total{
+	padding: 0.4em;
+}
+
+#total input{
+	padding: 2.5em 1em;
+	width: 100%;
+}
