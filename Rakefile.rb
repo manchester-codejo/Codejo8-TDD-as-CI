@@ -20,9 +20,10 @@ task :scenarios do
 		sh 'bundle exec cucumber'
 	rescue
 		puts 'NOT FEATURE COMPLETE'
+		puts 'Hit ENTER to continue'
 		gets.chomp
 	ensure
-		process = `pidof ruby1.9.1`
+		process = `pidof ruby`
 		sh "kill #{process}"
 	end
 end
