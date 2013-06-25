@@ -1,5 +1,5 @@
 class CheckoutFactory
 	def self.create(display)
-		NullCheckout.new(display)
+		Checkout.new(display)
 	end
 end
