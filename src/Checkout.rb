@@ -1,12 +1,12 @@
 require_relative 'Money'
 
 class PriceList
-	PRICE_OF_A = 50
+	SKU_PRICE_MAP = {
+		'A'=> 50,
+		'B'=> 30
+	}
 	def get_price(sku)
-		if sku == 'A' 
-			return PRICE_OF_A
-		end
-		30
+		SKU_PRICE_MAP[sku]
 	end
 end
 
