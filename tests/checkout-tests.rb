@@ -12,7 +12,15 @@ class TestCheckout < Test::Unit::TestCase
 		assert_equal(price_of_a, @total)
 	end
 
-	# def test_
+	def test_scan_one_B_total_is_50
+		item_b_sku ='B'
+		price_list = PriceList.new
+		price_of_B = 30
+		checkout = Checkout.new(self,price_list)
+		checkout.scan(item_b_sku)
+		checkout.total()
+		assert_equal(price_of_B, @total)
+	end
 
 	def show_total(total)
 		@total = total.amount

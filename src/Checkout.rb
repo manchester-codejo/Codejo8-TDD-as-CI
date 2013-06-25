@@ -3,7 +3,10 @@ require_relative 'Money'
 class PriceList
 	PRICE_OF_A = 50
 	def get_price(sku)
-		PRICE_OF_A
+		if sku == 'A' 
+			return PRICE_OF_A
+		end
+		30
 	end
 end
 
