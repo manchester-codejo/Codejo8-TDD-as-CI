@@ -1,6 +1,5 @@
 
 class CheckoutFactory
-
 	SKU_PRICE_MAP = {
 		'A'=> 50,
 		'B'=> 30,

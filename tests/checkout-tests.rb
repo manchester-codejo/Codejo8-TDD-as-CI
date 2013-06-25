@@ -15,6 +15,20 @@ class TestCheckout < Test::Unit::TestCase
 		assert_equal(sku_price_map[item_a_sku], @total)
 	end
 
+	def test_scan_two_items_total_is_correct_price
+		item_a_sku = 'A'
+		total_price = 100
+		sku_price_map = {
+			item_a_sku => 50
+		}
+		price_list = PriceList.new(sku_price_map)
+		checkout = Checkout.new(self,price_list)
+		checkout.scan(item_a_sku)
+		checkout.scan(item_a_sku)
+		checkout.total()
+
+		assert_equal(total_price, @total)
+	end
 	
 	def show_total(total)
 		@total = total.amount

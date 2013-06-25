@@ -15,10 +15,11 @@ class Checkout
 	def initialize(display, price_list)
 		@display = display
 		@price_list = price_list
+		@total_price = 0
 	end
 
 	def scan(sku)
-		@total_price = @price_list.get_price(sku)
+		@total_price += @price_list.get_price(sku)
 	end
 
 	def total
