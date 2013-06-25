@@ -1,12 +1,13 @@
 require_relative 'Money'
 
 class PriceList
-	SKU_PRICE_MAP = {
-		'A'=> 50,
-		'B'=> 30
-	}
+
+	def initialize(sku_price_map)
+		@sku_price_map = sku_price_map
+	end
+
 	def get_price(sku)
-		SKU_PRICE_MAP[sku]
+		@sku_price_map[sku]
 	end
 end
 
