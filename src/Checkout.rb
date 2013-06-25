@@ -1,11 +1,24 @@
 require_relative 'Money'
 
+class PriceList
+	PRICE_OF_A = 50
+	def get_price(sku)
+		PRICE_OF_A
+	end
+end
+
 class Checkout
-	def initialize(jimmy)
-		jimmy.show_total(Money.new(amount: 50))
+	def initialize(display, price_list)
+		@display = display
+		@price_list = price_list
 	end
-	def scan(jimmy1)
+
+	def scan(sku)
+		@total_price = @price_list.get_price(sku)
 	end
+
 	def total
+		total = Money.new(amount: @total_price)
+		@display.show_total(total)
 	end
 end
