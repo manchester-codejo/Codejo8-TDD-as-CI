@@ -2,8 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require_relative 'src/Registry.rb'
 
-
-def reset
+def new_checkout
 	$total_view_store = TotalViewStore.new
 	$checkout = CheckoutFactory.create($total_view_store)
 end
@@ -13,7 +12,7 @@ get '/' do
 end
 
 post '/basket/new' do
-	reset
+	new_checkout
 	redirect '/basket/items'
 end
 
