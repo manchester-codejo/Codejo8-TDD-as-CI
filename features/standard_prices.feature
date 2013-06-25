@@ -1,7 +1,8 @@
 Feature: When I buy item(s) without special offers, then I am charged the correct amount
 
 	Scenario Outline: I buy one item
-		Given one item "<sku>" added
+		Given I create a new basket
+		And one item "<sku>" added
 		When the total is calculated
 		Then the total is "<total>"
 
@@ -13,7 +14,8 @@ Feature: When I buy item(s) without special offers, then I am charged the correc
 		| D   | 99    |
 
 	Scenario: I buy multiple items
-		Given one item "A" added
+		Given I create a new basket
+		And one item "A" added
 		And one item "B" added
 		And one item "C" added
 		And one item "D" added
