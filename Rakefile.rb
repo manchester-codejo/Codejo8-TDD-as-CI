@@ -23,8 +23,7 @@ task :scenarios do
 		puts 'Hit ENTER to continue'
 		gets.chomp
 	ensure
-		process = `pidof ruby`
-		sh "kill #{process}"
+		sh "pkill ruby"
 	end
 end
 
